@@ -1,0 +1,143 @@
+Q1: What are the Conditional Operators in Java?
+
+Ans:-Conditional operators check the condition and decides the desired result on the basis of both conditions. 
+Types of Conditional Operator:-
+There are three types of the conditional operator in Java:
+
+1.Conditional AND
+2.Conditional OR
+3.Ternary Operator
+
+1.Conditional AND
+The operator is applied between two Boolean expressions. It is denoted by the two AND operators (&&). It returns true if and only if both expressions are true, else returns false.
+
+2.Conditional OR
+The operator is applied between two Boolean expressions. It is denoted by the two OR operator (||). It returns true if any of the expression is true, else returns false.
+
+3.Ternary Operator
+The meaning of ternary is composed of three parts. The ternary operator (? :) consists of three operands. It is used to evaluate Boolean expressions. The operator decides which value will be assigned to the variable. It is the only conditional operator that accepts three operands. It can be used instead of the if-else statement. It makes the code much more easy, readable, and shorter. Every code using an if-else statement cannot be replaced with a ternary operator.
+
+Q2: What are the types of operators based on the number of operands?
+
+Ans:-There are two types of mathematical operators: 
+1.Unary:-Unary operators perform an action with a single operand. 
+2.Binary. Binary operators perform actions with two operands.
+
+Q3: What is the use of Switch case in Java programming?
+
+Ans:-The Java switch statement executes one statement from multiple conditions. It is like if-else-if ladder statement. The switch statement works with byte, short, int, long, enum types, String and some wrapper types like Byte, Short, Int, and Long. 
+
+Q4: What are the conditional Statements and use of conditional statements in Java?
+
+Ans:-Java has the following conditional statements: Use if to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false. (If-Else)
+
+Q5: What is the syntax of if else statement?
+
+Ans:-An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.
+
+Syntax
+Following is the syntax of an if...else statement −
+
+if(Boolean_expression) {
+   // Executes when the Boolean expression is true
+}else {
+   // Executes when the Boolean expression is false
+}
+
+The if...else if...else Statement
+An if statement can be followed by an optional else if...else statement, which is very useful to test various conditions using single if...else if statement.
+
+When using if, else if, else statements there are a few points to keep in mind.
+
+An if can have zero or one else's and it must come after any else if's.
+
+An if can have zero to many else if's and they must come before the else.
+
+Once an else if succeeds, none of the remaining else if's or else's will be tested.
+
+Syntax
+Following is the syntax of an if...else statement −
+
+if(Boolean_expression 1) {
+   // Executes when the Boolean expression 1 is true
+}else if(Boolean_expression 2) {
+   // Executes when the Boolean expression 2 is true
+}else if(Boolean_expression 3) {
+   // Executes when the Boolean expression 3 is true
+}else {
+   // Executes when the none of the above condition is true.
+}
+
+Q6: How do you compare two strings in Java?
+
+Ans:-String is a sequence of characters. In Java, objects of String are immutable which means they are constant and cannot be changed once created.
+
+Below are 5 ways to compare two Strings in Java:
+
+Using user-defined function : Define a function to compare values with following conditions :
+if (string1 > string2) it returns a positive value.
+if both the strings are equal lexicographically
+i.e.(string1 == string2) it returns 0.
+if (string1 < string2) it returns a negative value.
+The value is calculated as (int)str1.charAt(i) – (int)str2.charAt(i)
+
+Q7: What is Mutable String in Java Explain with an example
+
+Ans:- Those strings whose content can be changed without creating a new object. StringBuffer and StringBuilder are mutable versions of String in java,
+
+public class MutableString
+{
+    public static void main (String[] args)
+    {
+        StringBuffer str1 = new StringBuffer("JavaGoal");
+        StringBuilder str2 = new StringBuilder("Learning");
+        
+        System.out.println("Value of str1 before change :" + str1);
+        System.out.println("Value of str2 before change :" + str2);
+        
+        str1.append(".com");
+        str2.append(" website");
+        
+        System.out.println("Value of str1 after change :" + str1);
+        System.out.println("Value of str2 after change :" + str2);
+    }
+}
+
+Q8: Write a program to sort a String Alphabetically
+
+Ans:-import java.util.Arrays;
+import java.util.Scanner;
+public class SortingString {
+   public static void main(String args[]) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a string value: ");
+      String str = sc.nextLine();
+      char charArray[] = str.toCharArray();
+      Arrays.sort(charArray);
+      System.out.println(new String(charArray));
+   }
+}
+
+Q9 : Write a program to check if the letter 'e' is present in the word'Umbrella'.
+
+Ans:- class Check_Letter
+{
+	public static void main(String[] args)
+	{
+		String str = "Umbrella ";
+		boolean pre = false;
+		for(int i = 0;i<str.length();i++)
+		{
+			if(str.charAt(i) == 'e')
+			{
+				pre=true;
+				break;
+			}
+		}
+		System.out.println(pre);
+	}
+}
+
+Q10: Where exactly is the string constant pool located in the memory?
+
+Ans:-A string constant pool is a separate place in the heap memory where the values of all the strings which are defined in the program are stored. When  declare a string, an object of type String is created in the stack, while an instance with the value of the string is created in the heap. On standard assignment of a value to a string variable, the variable is allocated stack, while the value is stored in the heap in the string constant pool.
